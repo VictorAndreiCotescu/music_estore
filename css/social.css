@@ -1,0 +1,23 @@
+.fa {
+    padding: 30px;
+    font-size: 40px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+.fa-facebook {
+}
+
+
+.fa-instagram {
+}
+
+.fa-twitter{
+}
