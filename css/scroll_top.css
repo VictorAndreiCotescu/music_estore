@@ -1,14 +1,23 @@
-img {
+img{
     width: 40px;
     float: right;
     margin-right: 10px;
     margin-bottom: 20px;
 }
 
-img:hover {
+img.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: auto;
+    top: auto;
+}
+
+img.sticky:hover {
     width: 45px;
     margin-right: 7.5px;
     margin-bottom: 20px;
     cursor:pointer;
 
 }
+
+
