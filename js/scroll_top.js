@@ -1,6 +1,5 @@
 mybutton = document.getElementById("myBtn");
 
-
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {

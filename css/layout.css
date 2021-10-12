@@ -1,0 +1,18 @@
+.grid-container {
+    display: grid;
+}
+
+.slideshow{
+    /*
+    grid-area: slideshow;
+    */
+    grid-template-columns: 1fr 1fr 1fr;
+    position: center;
+}
+
+.item-display{
+    /*
+    grid-area: item-display;
+    */
+    grid-template-columns: .7fr .3fr .3fr .3fr  .7fr;
+}

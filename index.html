@@ -8,13 +8,15 @@
     <meta name="keywords" content="muzica, instrument, chitara, pian">
     <meta name="author" content="Victor Andrei Cotescu">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./res/favicon-32x32.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="./res/11941-84.png" type="image/x-icon"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"/>
     <link rel="stylesheet" href="./css/pos.css"/>
     <link rel="stylesheet" href="./css/scroll_top.css"/>
     <link rel="stylesheet" href="./css/social.css"/>
     <link rel="stylesheet" href="./css/faq.css"/>
+    <link rel="stylesheet" href="./css/layout.css"/>
     <script src="js/scroll_top.js"></script>
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -38,8 +40,8 @@
 
 <header>
 
-    <div class="container-fluid">
-        <div class="row" style="background: #e5e5e5">
+    <div class="container-fluid" style="margin-left: 100px; width: 1690px; height: 150px">
+        <div class="row" style="background: #e5e5e5; margin-right: 100px; width: 1690px">
             <div>
                 <a href="index.html"><img src="res/logo1.jpeg" alt="logo"
                                           style="width: 200px; height: 150px; float: left"/></a>
@@ -47,144 +49,250 @@
         </div>
     </div>
 
-    <nav>
-        <ul>
-            <li><a href="index.html"> Acasa </a>
-                <ul>
-                    <li><a href="#categorii">Categorii</a></li>
-                    <li><a href="#despre">Despre</a></li>
-                    <li><a href="#faq">FAQ</a></li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="width: 1690px; margin-left: 100px">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" style="color: #e5e5e5">
+                        CATEGORII
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="./pages/chitara_bass.html">Chitara/BASS</a>
+                        <a class="dropdown-item" href="#">CLAVIATURI</a>
+                        <a class="dropdown-item" href="#">TOBE</a>
+                        <a class="dropdown-item" href="#">ACCESORII</a>
+                    </div>
+                </li>
 
-                </ul>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="color: #e5e5e5">Despre noi <span
+                            class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="color: #e5e5e5">FAQ <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+
+        </div>
+
+        <ul class="navbar-nav" style="float: right">
+            <li style="margin-top: 10px">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
             </li>
-            <li><a href="#categorii"> Categorii </a>
-                <ul>
-                    <li><a href="#ch/b">Chitara/Bass</a></li>
-                    <li><a href="#clv">Claviaturi</a></li>
-                    <li><a href="#tobe">Tobe/Percutie</a></li>
-                    <li><a href="#accs">Acesorii</a></li>
-                </ul>
+            <li style="margin-top: 10px; margin-right: 20px">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </li>
+            <li class="nav-item active" style="float: right">
+                <a href="#" style="margin-top: 10px"> <img src="./res/cos.png" alt="cos" style="margin-top: 10px"/></a>
+
             </li>
         </ul>
     </nav>
+
+
+    <!-- <nav>
+         <ul>
+             <li><a href="index.html"> Acasa </a>
+                 <ul>
+                     <li><a href="#categorii">Categorii</a></li>
+                     <li><a href="#despre">Despre</a></li>
+                     <li><a href="#faq">FAQ</a></li>
+
+                 </ul>
+             </li>
+             <li><a href="#categorii"> Categorii </a>
+                 <ul>
+                     <li><a href="#ch/b">Chitara/Bass</a></li>
+                     <li><a href="#clv">Claviaturi</a></li>
+                     <li><a href="#tobe">Tobe/Percutie</a></li>
+                     <li><a href="#accs">Acesorii</a></li>
+                 </ul>
+             </li>
+         </ul>
+     </nav>-->
+
 
 </header>
 
 <main>
 
-    <section id="categorii">
-        <h2>Categorii</h2>
-        <section>
-            <h3 id="ch/b" style="margin-left: 20px">Chitara/Bass</h3>
-            <q style="margin-left: 40px">I started out playing guitar because Jimi Hendrix was my hero, so my roots
-                were really based on Jimi Hendrix and his style of playing.
 
-                – Joe Satriani.</q>
-            <ul style="margin-left: 60px">
-                <li>Acustice</li>
-                <li>Semi-acustice</li>
-                <li>Electrice</li>
-            </ul>
-        </section>
+    <div class="grid-container">
 
-        <section>
-            <h3 id="clv" style="margin-left: 20px">Claviaturi</h3>
-            <q style="margin-left: 40px">The piano is able to communicate the subtlest universal truths by means of
-                wood, metal and vibrating air. – Kenneth Miller
-            </q>
-            <ul style="margin-left: 60px">
-                <li>Claviaturi</li>
-                <li>Piane</li>
-                <li>MIDI</li>
-            </ul>
-        </section>
+        <div>
+            <br>
+        </div>
 
-        <section>
-            <h3 id="tobe" style="margin-left: 20px">Tobe/Percutie</h3>
-            <q style="margin-left: 40px">Playing drums, for me, is like breathing. It's like thinking. It's like eating.
-                It's like walking. - Joey Jordison
-            </q>
-            <ul style="margin-left: 60px">
-                <li>acustice</li>
-                <li>electronice</li>
-                <li>cinele</li>
-            </ul>
-        </section>
+        <div class="grid-container slideshow">
+            <div class="col">
+            liber
+            </div>
+            <div class="col">
+                <img src="res/slideshow/1.jpg" alt="1" style="width: 1400px; height: 450px;">
+            </div>
+            <div class="col">
+            liber
+            </div>
 
-        <section>
-            <h3 id="accs" style="margin-left: 20px">Acesorii</h3>
-            <q style="margin-left: 40px">Without music, life would be a mistake. - Friedrich Nietzsche
-            </q>
-            <ul style="margin-left: 60px">
-                <li>casti</li>
-                <li>acordoare si metronoame</li>
-                <li>studio</li>
-            </ul>
-        </section>
-    </section>
-
-    <section id="despre">
-        <h2>Despre</h2>
-        <p style="margin-left: 20px"> Magazin de instrumente muzicale </p>
+        </div>
 
 
-    </section>
+        <div class="grid-container item-display">
+            <div class="col">liber</div>
+            <div class="col"><img src="res/slideshow/1.jpg" alt="1" style="width: 500px; height: 500px;"></div>
+            <div class="col"><img src="res/slideshow/1.jpg" alt="1" style="width: 500px; height: 500px;"></div>
+            <div class="col"><img src="res/slideshow/1.jpg" alt="1" style="width: 500px; height: 500px;"></div>
+            <div class="col">liber</div>
+        </div>
 
-    <section id="faq">
+        <div class="grid-container item-display">
+            <div class="col">liber</div>
+            <div class="col"><img src="res/slideshow/1.jpg" alt="1" style="width: 500px; height: 500px;"></div>
+            <div class="col"><img src="res/slideshow/1.jpg" alt="1" style="width: 500px; height: 500px;"></div>
+            <div class="col"><img src="res/slideshow/1.jpg" alt="1" style="width: 500px; height: 500px;"></div>
+            <div class="col">liber</div>
+        </div>
 
-        <h2><abbr title="frequently asked questions">FAQ</abbr></h2>
+        <div class="grid-container item-display">
+            <div class="col">liber</div>
+            <div class="col"><img src="res/slideshow/1.jpg" alt="1" style="width: 500px; height: 500px;"></div>
+            <div class="col"><img src="res/slideshow/1.jpg" alt="1" style="width: 500px; height: 500px;"></div>
+            <div class="col"><img src="res/slideshow/1.jpg" alt="1" style="width: 500px; height: 500px;"></div>
+            <div class="col">liber</div>
+        </div>
+    </div>
 
-        <details class="faq">
-            <summary>Cate tipuri de chitare acustice exista?</summary>
-            <p>
-                <b>Chitarele</b> <b>acustice</b> se împart în <b>chitare</b> <b>clasice</b> (cu <b>corzi de nylon</b>,
-                folosite în studiul <b>muzicii</b> clasice)
-                și
-                chitare acustice, cu <b>corzi de oțel</b>, folosite pentru majoritatea genurilor <b>muzicale</b>. Deși
-                există o
-                preconcepție că o <b>chitară clasică</b> este potrivită unui începător datorită <b>corzi</b>lor ceva mai
-                moi, este
-                recomandat ca primul <b>instrument</b> să fie ales nu după acest criteriu ci după muzica ce urmează să
-                fie
-                studiată
-            </p>
-        </details>
+    <!-- <div class="container-fluid" style="position: relative;">
+         <img src="res/slideshow/1.jpg" alt="1" style="width: 600px">
+     </div>
+
+     <div style="width: 1690px; margin-left: 150px; margin-right:150px">
+         <section id="categorii">
+             <h2>Categorii</h2>
+             <section>
+                 <h3 id="ch/b" style="margin-left: 20px">Chitara/Bass</h3>
+                 <q style="margin-left: 40px">I started out playing guitar because Jimi Hendrix was my hero, so my roots
+                     were really based on Jimi Hendrix and his style of playing.
+
+                     – Joe Satriani.</q>
+                 <ul style="margin-left: 60px">
+                     <li>Acustice</li>
+                     <li>Semi-acustice</li>
+                     <li>Electrice</li>
+                 </ul>
+             </section>
+
+             <section>
+                 <h3 id="clv" style="margin-left: 20px">Claviaturi</h3>
+                 <q style="margin-left: 40px">The piano is able to communicate the subtlest universal truths by means of
+                     wood, metal and vibrating air. – Kenneth Miller
+                 </q>
+                 <ul style="margin-left: 60px">
+                     <li>Claviaturi</li>
+                     <li>Piane</li>
+                     <li>MIDI</li>
+                 </ul>
+             </section>
+
+             <section>
+                 <h3 id="tobe" style="margin-left: 20px">Tobe/Percutie</h3>
+                 <q style="margin-left: 40px">Playing drums, for me, is like breathing. It's like thinking. It's like
+                     eating.
+                     It's like walking. - Joey Jordison
+                 </q>
+                 <ul style="margin-left: 60px">
+                     <li>acustice</li>
+                     <li>electronice</li>
+                     <li>cinele</li>
+                 </ul>
+             </section>
+
+             <section>
+                 <h3 id="accs" style="margin-left: 20px">Acesorii</h3>
+                 <q style="margin-left: 40px">Without music, life would be a mistake. - Friedrich Nietzsche
+                 </q>
+                 <ul style="margin-left: 60px">
+                     <li>casti</li>
+                     <li>acordoare si metronoame</li>
+                     <li>studio</li>
+                 </ul>
+             </section>
+         </section>
+
+         <section id="despre">
+             <h2>Despre</h2>
+             <p style="margin-left: 20px"> Magazin de instrumente muzicale </p>
 
 
-        <details class="faq">
-            <summary>Dupa ce criterii trebuie sa aleg chitara acustica?</summary>
-            <p>
-                Este de recomandat ca instrumentul să fie ales în funcție de muzica ce urmează să fie cântată – cel mai
-                potrivit instrument pentru muzica clasică este chitara cu corzi de nylon însă pentru mai toate genurile
-                rămase, soluția cea mai bună este de regulă o chitară acustica tip western, cu o cutie de rezonanță mare
-                și
-                corzi de oțel. Bineînțeles, recomandarea profesorului este foarte importantă.
-            </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/z9Elx4nCTgk"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-        </details>
+         </section>
+
+         <section id="faq">
+
+             <h2><abbr title="frequently asked questions">FAQ</abbr></h2>
+
+             <details class="faq">
+                 <summary>Cate tipuri de chitare acustice exista?</summary>
+                 <p>
+                     <b>Chitarele</b> <b>acustice</b> se împart în <b>chitare</b> <b>clasice</b> (cu <b>corzi de
+                     nylon</b>,
+                     folosite în studiul <b>muzicii</b> clasice)
+                     și
+                     chitare acustice, cu <b>corzi de oțel</b>, folosite pentru majoritatea genurilor <b>muzicale</b>.
+                     Deși
+                     există o
+                     preconcepție că o <b>chitară clasică</b> este potrivită unui începător datorită <b>corzi</b>lor ceva
+                     mai
+                     moi, este
+                     recomandat ca primul <b>instrument</b> să fie ales nu după acest criteriu ci după muzica ce urmează
+                     să
+                     fie
+                     studiată
+                 </p>
+             </details>
 
 
-        <details class="faq">
-            <summary>Care sunt cele mai bune branduri de chitare acustice?</summary>
-            <p>
-                <q>Preferăm Ibanez, Takamine, PRS și Pulse</q>
-            </p>
-        </details>
+             <details class="faq">
+                 <summary>Dupa ce criterii trebuie sa aleg chitara acustica?</summary>
+                 <p>
+                     Este de recomandat ca instrumentul să fie ales în funcție de muzica ce urmează să fie cântată – cel
+                     mai
+                     potrivit instrument pentru muzica clasică este chitara cu corzi de nylon însă pentru mai toate
+                     genurile
+                     rămase, soluția cea mai bună este de regulă o chitară acustica tip western, cu o cutie de rezonanță
+                     mare
+                     și
+                     corzi de oțel. Bineînțeles, recomandarea profesorului este foarte importantă.
+                 </p>
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/z9Elx4nCTgk"
+                         title="YouTube video player" frameborder="0"
+                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                         allowfullscreen></iframe>
+             </details>
 
 
-        <details class="faq">
-            <summary>Ce genuri de muzica se pot canta la o chitara acustica?</summary>
-            <p>
-                Chitara acustică este un instrument foarte polivalent, folosit în toate genurile muzicale, de la folk la
-                rock, blues și chiar muzică populară
-            </p>
-        </details>
+             <details class="faq">
+                 <summary>Care sunt cele mai bune branduri de chitare acustice?</summary>
+                 <p>
+                     <q>Preferăm Ibanez, Takamine, PRS și Pulse</q>
+                 </p>
+             </details>
 
-    </section>
 
+             <details class="faq">
+                 <summary>Ce genuri de muzica se pot canta la o chitara acustica?</summary>
+                 <p>
+                     Chitara acustică este un instrument foarte polivalent, folosit în toate genurile muzicale, de la
+                     folk la
+                     rock, blues și chiar muzică populară
+                 </p>
+             </details>
+
+         </section>
+     </div>-->
 </main>
 
 
@@ -198,26 +306,30 @@
 
 
 <footer>
-    <img src="./res/186407_arrow_up_icon.png" id="scroll-top" alt="back_to_top_arrow" onclick="topFunction()"
-         class="sticky"/>
-    <a href="index.html"> <img src="res/Musicore-logos_white.png" alt="logo"
-                               style="width: 200px; height: 150px; float: right"/></a>
-    <section style="background: black">
-        <address style="margin-left: 20px; display: block; font-style: italic; color: darkgray">
-            <a href="tel:+4712345678" style="color: darkgray">+47 123 45 678</a><br>
-            <a href="mailto: musicore@jmail.ro" style="color: darkgray">musicore@jmail.ro</a><br>
-            <a href="index.html" style="color: darkgray">musicore.com</a> <br>
-            Box 564, Disneyland<br>
-            USA
-        </address>
-
-        <small style="background: black; color: darkgray">
-            &#169 Victor Andrei Cotescu
-            <time datetime="YYYY-MM-DD">2021-10-07</time>
-        </small>
 
 
-    </section>
+    <div class="container-fluid" style="margin-left: 100px; margin-right: 200px; width: 1690px">
+
+        <section style="background: black; margin-right: 200px; width: 1690px">
+            <img src="./res/186407_arrow_up_icon.png" id="scroll-top" alt="back_to_top_arrow" onclick="topFunction()"
+                 class="sticky"/>
+            <a href="index.html"> <img src="res/Musicore-logos_white.png" alt="logo"
+                                       style="width: 200px; height: 150px; float: right"/></a>
+
+            <address style="margin-left: 20px; display: block; font-style: italic; color: darkgray">
+                <a href="tel:+4712345678" style="color: darkgray">+47 123 45 678</a><br>
+                <a href="mailto: musicore@jmail.ro" style="color: darkgray">musicore@jmail.ro</a><br>
+                <a href="index.html" style="color: darkgray">musicore.com</a> <br>
+                Box 564, Disneyland<br>
+                USA
+            </address>
+
+            <small style="background: black; color: darkgray">
+                &#169 Victor Andrei Cotescu
+                <time datetime="YYYY-MM-DD">2021-10-07</time>
+            </small>
+        </section>
+    </div>
 
 
 </footer>
