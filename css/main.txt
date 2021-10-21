@@ -1,0 +1,139 @@
+<section id="categorii">
+        <h2 style="color: darkgray;">Categorii</h2>
+        <section>
+            <h3 id="chb" style="margin-left: 20px; color: darkgray;">Chitara/Bass</h3>
+            <q style="margin-left: 40px; color: darkgray;">I started out playing guitar because Jimi Hendrix was my hero, so my roots
+                were really based on Jimi Hendrix and his style of playing.
+
+                – Joe Satriani.</q>
+            <ul style="margin-left: 60px; color: darkgray;">
+                <li>Acustice</li>
+                <li>Semi-acustice</li>
+                <li>Electrice</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3 id="clv" style="margin-left: 20px; color: darkgray;">Claviaturi</h3>
+            <q style="margin-left: 40px; color: darkgray;">The piano is able to communicate the subtlest universal truths by means of
+                wood, metal and vibrating air. – Kenneth Miller
+            </q>
+            <ul style="margin-left: 60px; color: darkgray;">
+                <li>Claviaturi</li>
+                <li>Piane</li>
+                <li>MIDI</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3 id="tobe" style="margin-left: 20px; color: darkgray;">Tobe/Percutie</h3>
+            <q style="margin-left: 40px; color: darkgray;">Playing drums, for me, is like breathing. It's like thinking. It's like eating.
+                It's like walking. - Joey Jordison
+            </q>
+            <ul style="margin-left: 60px; color: darkgray;">
+                <li>acustice</li>
+                <li>electronice</li>
+                <li>cinele</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3 id="accs" style="margin-left: 20px; color: darkgray;">Acesorii</h3>
+            <q style="margin-left: 40px; color: darkgray;">Without music, life would be a mistake. - Friedrich Nietzsche
+            </q>
+            <ul style="margin-left: 60px; color: darkgray;">
+                <li>casti</li>
+                <li>acordoare si metronoame</li>
+                <li>studio</li>
+            </ul>
+        </section>
+    </section>
+
+    <section id="despre">
+        <h2 style="color: darkgray;">Despre</h2>
+        <p style="margin-left: 20px; color: darkgray;"> Magazin de instrumente muzicale </p>
+
+
+    </section>
+
+    <section id="faq">
+
+        <h2><abbr title="frequently asked questions" style="color: darkgray">FAQ</abbr></h2>
+
+        <details class="faq">
+            <summary>Cate tipuri de chitare acustice exista?</summary>
+            <p>
+                <b>Chitarele</b> <b>acustice</b> se împart în <b>chitare</b> <b>clasice</b> (cu <b>corzi de nylon</b>,
+                folosite în studiul <b>muzicii</b> clasice)
+                și
+                chitare acustice, cu <b>corzi de oțel</b>, folosite pentru majoritatea genurilor <b>muzicale</b>. Deși
+                există o
+                preconcepție că o <b>chitară clasică</b> este potrivită unui începător datorită <b>corzi</b>lor ceva mai
+                moi, este
+                recomandat ca primul <b>instrument</b> să fie ales nu după acest criteriu ci după muzica ce urmează să
+                fie
+                studiată
+            </p>
+        </details>
+
+
+        <details class="faq">
+            <summary>Dupa ce criterii trebuie sa aleg chitara acustica?</summary>
+            <p>
+                Este de recomandat ca instrumentul să fie ales în funcție de muzica ce urmează să fie cântată – cel mai
+                potrivit instrument pentru muzica clasică este chitara cu corzi de nylon însă pentru mai toate genurile
+                rămase, soluția cea mai bună este de regulă o chitară acustica tip western, cu o cutie de rezonanță mare
+                și
+                corzi de oțel. Bineînțeles, recomandarea profesorului este foarte importantă.
+            </p>
+            <a href = "https://www.youtube.com/embed/z9Elx4nCTgk" target="iframe">DO NOT USE YOUTUBE</a>
+            <a href = "https://www.youtube.com/watch?v=MHj9XlV3fFg" target="iframe">DRUMS SOLO</a>
+            <iframe width="560" height="315" name="iframe"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </details>
+
+
+        <details class="faq">
+            <summary>Care sunt cele mai bune branduri de chitare acustice?</summary>
+            <p>
+                <q>Preferăm Ibanez, Takamine, PRS și Pulse</q>
+            </p>
+        </details>
+
+
+        <details class="faq" >
+            <summary>Ce genuri de muzica se pot canta la o chitara acustica?</summary>
+            <p>
+                Chitara acustică este un instrument foarte polivalent, folosit în toate genurile muzicale, de la folk la
+                rock, blues și chiar muzică populară
+            </p>
+        </details>
+
+    </section>
+
+/* Color Theme Swatches in Hex */
+$SIMPLE-SHAPES-1-hex: #C7C7C7;
+$SIMPLE-SHAPES-2-hex: #4D4D59;
+$SIMPLE-SHAPES-3-hex: #FFFFFF;
+$SIMPLE-SHAPES-4-hex: #8C8369;
+$SIMPLE-SHAPES-5-hex: #261414;
+
+/* Color Theme Swatches in RGBA */
+$SIMPLE-SHAPES-1-rgba: rgba(198,198,198, 1);
+$SIMPLE-SHAPES-2-rgba: rgba(77,77,89, 1);
+$SIMPLE-SHAPES-3-rgba: rgba(255,255,255, 1);
+$SIMPLE-SHAPES-4-rgba: rgba(140,131,105, 1);
+$SIMPLE-SHAPES-5-rgba: rgba(38,20,20, 1);
+
+/* Color Theme Swatches in HSLA */
+$SIMPLE-SHAPES-1-hsla: hsla(0, 0, 78, 1);
+$SIMPLE-SHAPES-2-hsla: hsla(240, 7, 32, 1);
+$SIMPLE-SHAPES-3-hsla: hsla(0, 0, 100, 1);
+$SIMPLE-SHAPES-4-hsla: hsla(44, 14, 48, 1);
+$SIMPLE-SHAPES-5-hsla: hsla(0, 31, 11, 1);
+
+
+
+

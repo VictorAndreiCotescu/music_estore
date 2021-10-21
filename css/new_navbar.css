@@ -1,0 +1,137 @@
+#nav {
+    list-style:none inside;
+    margin:0;
+    padding:0;
+    text-align:center;
+    color: #4D4D59;
+    opacity: 85%;
+}
+#nav li {
+    display:block;
+    position:relative;
+    float:left;
+    background: #4D4D59;
+}
+#nav li.nav-right{
+    display: block;
+    width: 20px;
+    margin-right: 200px;
+}
+#nav li a {
+    display:block;
+    padding:0;
+    text-decoration:none;
+    width:200px;
+    line-height:35px;
+    color:#C7C7C7;
+}
+
+#nav li i {
+    display:block;
+    padding:0;
+    text-decoration:none;
+    width:200px;
+    line-height:35px;
+    color:#C7C7C7;
+    background-color:#4D4D59;
+}
+
+#nav li:hover i.fa-bars{
+    background:#C7C7C7;
+    color: #4D4D59;
+    transition: all 0.4s ease-out;
+}
+#nav li:hover i.fa-shopping-cart{
+    background:#C7C7C7;
+    color: #4D4D59;
+    width: 110%;
+    transition: all 0.4s ease-in-out;
+}
+
+#nav li i.fa-shopping-cart{
+    background:#4D4D59;
+    color: #C7C7C7;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+}
+
+#nav li:hover i.fa-user{
+    background:#C7C7C7;
+    color: #4D4D59;
+    width: 110%;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+}
+#nav li i.fa-user{
+    background:#4D4D59;
+    color: #C7C7C7;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+}
+#nav li > ul > li:hover i{
+    background:#C7C7C7;
+    color: #4D4D59;
+    transition: all 0.4s ease-in-out;
+}
+#nav ul.subs > li > a {
+    background:#4D4D59;
+    color: #C7C7C7;
+    transition: all 0.4s ease-in-out;
+}
+#nav ul.subs > li:hover a {
+    background:#C7C7C7;
+    color: #4D4D59;
+    transition: all 0.4s ease-in-out;
+}
+
+#nav li:hover a{
+    background:#C7C7C7;
+    color: #4D4D59;
+    transition: all 0.4s ease-in-out;
+}
+
+#nav ul {
+    position:absolute;
+    padding:0;
+    left:0;
+    display:none;
+}
+#nav li:hover ul ul {display:none;}
+#nav li:hover ul {
+    display:block;
+    color: #4D4D59;
+}
+#nav li li:hover ul {
+    display:block;
+    color: #4D4D59;
+    background-color: #4D4D59;;
+    margin-left:200px;
+    margin-top:-35px;
+}
+
+#side-nav{
+    display: block;
+    list-style: none;
+    background-color: #4D4D59;
+    font-size: 30px;
+    color: white;
+}
+
+#side-nav ul{
+    display: block;
+    list-style: none;
+    font-size: 16px;
+    color: white;
+}
+
+#side-nav a{
+    color: white;
+    list-style: none;
+    font-size: 30px;
+}
+#side-nav li:hover li{
+    display:block;
+    background:#C7C7C7;
+    color: #4D4D59;
+}

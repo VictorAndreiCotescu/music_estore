@@ -1,7 +1,9 @@
 details {
     margin-left: 20px;
+    color: darkgray;
 }
 
 details > p {
     margin-left: 20px;
+    color: darkgray;
 }
