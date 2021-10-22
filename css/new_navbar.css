@@ -5,12 +5,14 @@
     text-align:center;
     color: #4D4D59;
     opacity: 85%;
+    font-size: 20px;
 }
 #nav li {
     display:block;
     position:relative;
     float:left;
     background: #4D4D59;
+    padding: 5px;
 }
 #nav li.nav-right{
     display: block;
@@ -97,7 +99,10 @@
     left:0;
     display:none;
 }
-#nav li:hover ul ul {display:none;}
+#nav li:hover ul ul {
+    display:none;
+}
+
 #nav li:hover ul {
     display:block;
     color: #4D4D59;
@@ -105,19 +110,26 @@
 #nav li li:hover ul {
     display:block;
     color: #4D4D59;
-    background-color: #4D4D59;;
+    background-color: #4D4D59;
     margin-left:200px;
     margin-top:-35px;
 }
 
 #side-nav{
+    margin-top: 100px;
     display: block;
     list-style: none;
     background-color: #4D4D59;
     font-size: 30px;
     color: white;
-}
+    transform: translate(-350px, 0px);
+    transition: transform 1s;
 
+}
+#side-nav:hover{
+    transform: translate(0px, 0px);
+    transition: ease-out 0.3s;
+}
 #side-nav ul{
     display: block;
     list-style: none;
@@ -130,8 +142,19 @@
     list-style: none;
     font-size: 30px;
 }
-#side-nav li:hover li{
+#side-nav li >ul >li:hover{
     display:block;
     background:#C7C7C7;
     color: #4D4D59;
+
+}
+#side-nav li>a:hover li>a{
+    display:block;
+    background:#C7C7C7;
+    color: #4D4D59;
+}
+.rounded > ul{
+    border-radius: 0 25px 25px 0;
+    background: #73AD21;
+    padding: 20px;
 }
