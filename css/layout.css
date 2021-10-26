@@ -2,6 +2,7 @@
     margin-left:0;
     margin-right: auto;
     position: relative;
+    resize: both;
 }
 
 .footer-wrapper{
@@ -71,7 +72,7 @@ nav{
 
 #prez{
     grid-area: prez;
-    margin: 0 25% 0;
+
 }
 
 #prez > img{
@@ -85,9 +86,10 @@ nav{
 }
 #ev{
     grid-area: ev;
+    margin-left: 0;
 }
 #ev > ul{
-    margin-left: 50px
+    margin-left: 0;
 }
 #ev > ul > li{
     display: inline-grid;

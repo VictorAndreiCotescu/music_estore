@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ro" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="ro" xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Mgazin online de instrumente muzicale">
-    <meta name="keywords" content="muzica, instrument, chitara, pian">
+    <meta name="keywords"
+          content="muzica, instrument, instrumente, chitara, electrica, acustica, electro-acustica, corzi, corzi de chitara, corzi de bass, ibanez, warwick, fender, squire, jazz, pian, claviatura, midi, pian electric, pianina, orga, korg, roland, tobe, bete, fete tobe">
     <meta name="author" content="Victor Andrei Cotescu">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="res/favicon-32x32.png" type="image/x-image"/>
@@ -16,27 +17,13 @@
     <link rel="stylesheet" href="./css/navbar.css"/>
     <link rel="stylesheet" href="./css/sub-dropdown.css"/>
     <link rel="stylesheet" href="./css/new_navbar.css"/>
+    <link rel="stylesheet" href="./css/tooltip.css"/>
     <link rel="stylesheet" href="./css/produs.css"/>
+
     <script src="./js/scroll_top.js"></script>
 
     <script src="https://kit.fontawesome.com/1866184d7d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"/>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
--->
 
     <title>Musxcore</title>
 
@@ -44,6 +31,56 @@
         html, body {
             margin: 0;
             height: 100%;
+            background-image: url("res/background.jpg");
+            resize: both;
+        }
+
+        div.sticky {
+            position: sticky;
+            top: 1000px;
+            float: right;
+            margin-right: 50px;
+            font-size: 20px;
+            z-index: 5;
+            border-left: solid #4D4D59;
+            border-right: solid #4D4D59;
+            border-radius: 25px;
+            height: 20px;
+            opacity: 70%;
+            margin-bottom: 10px;
+        }
+
+        div.triangle {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 15px solid #4D4D59;
+            position: center;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        div.sticky > div:hover div.triangle {
+            transform: translateY(-5px);
+            transition: all 0.5s ease-in-out;
+            border-bottom: 15px solid #8f8166;
+            opacity: 100% !important;
+        }
+
+        .prez_element {
+            display: none;
+            animation-name: fade;
+            animation-duration: 2s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0
+            }
+            to {
+                opacity: 1
+            }
         }
     </style>
 
@@ -53,17 +90,18 @@
 
 <header>
 
-    <div class="header-wrapper" style="z-index: 1" >
+    <div class="header-wrapper" style="z-index: 1">
 
-        <div class="header" style="opacity: 80%">
-            <a href="#" class="logo"><img src="./res/ezgif.com-gif-maker.gif" alt="logo" style="height: 130px; width: 320px; "></a>
+        <div class="header" style="opacity: 95%">
+            <a href="#" class="logo"><img src="./res/ezgif.com-gif-maker.gif" alt="logo"
+                                          style="height: 130px; width: 320px; "></a>
         </div>
-        <div style="position: absolute; float: left; width: 1903px">
-            <img src="res/slideshow/pian.jpg" alt="prez" style="width: 1903px; height: 500px; opacity: 80%; z-index: 9999; float:left;">
-        </div>
+        <!--<div style="position: absolute; float: left; width: 1903px">
+            <img src="res/background.jpg" alt="prez" style="width: 1903px; height: 4000px; opacity: 80%; z-index: 9999; float:left;">
+        </div>-->
         <nav style="opacity: 85%">
             <ul id="nav">
-                <li> <i class="fas fa-bars"> Categorii</i>
+                <li><i class="fas fa-bars"> </i>
                     <ul>
                         <li><i class="fas fa-angle-right">Chitara/Bass</i>
                             <ul class="subs">
@@ -105,8 +143,8 @@
                 <li><a href="#">Despre</a></li>
                 <li><a href="#">FAQ</a></li>
 
-                <li class="nav-right" style="float:right"> <a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                <li class="nav-right" style="float:right"> <a href="#"><i class="fas fa-user"></i> </a></li>
+                <li class="nav-right" style="float:right"><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                <li class="nav-right" style="float:right"><a href="#"><i class="fas fa-user"></i> </a></li>
             </ul>
         </nav>
 
@@ -118,15 +156,38 @@
 
 <main>
 
+    <div class="sticky">
+        <div>
+            <div class="tooltip" onclick="location.href='#'" style="text-decoration: none">
+                <div class="triangle">
+                    <span class="tooltiptext">
+                        Inceputul paginii
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container" style="margin-top: 50px">
 
-        <div id="prez">
+        <div id="prez" style="width: 1903px">
 
-
-            <img src="res/slideshow/1.jpg" alt="prez" style="width: fit-content; height: 400px; z-index: 2; margin-left: 0; opacity: 100%; position: relative;">
-
-
+            <div class="prez_element">
+                <img src="res/slideshow/numa_x_banner_key.jpg" alt="prez"
+                     style="width: 1903px; height: 500px; z-index: 0; margin-left: 0; opacity: 100%; position: relative; float: left">
+            </div>
+            <div class="prez_element">
+                <img src="res/slideshow/2d0e11491a84fe1a05fda96ae164884f5d260f00_Katana100-1.jpg" alt="prez"
+                     style="width: 1903px; height: 500px; z-index: 0; margin-left: 0; opacity: 100%; position: relative; float: left">
+            </div>
+            <div class="prez_element">
+                <img src="res/slideshow/bfde4ce29b83053b8409ad2097f415196ae1c19d_Tobe%20electronice%20yamha%20DTX10.jpg"
+                     alt="prez"
+                     style="width: 1903px; height: 500px; z-index: 0; margin-left: 0; opacity: 100%; position: relative; float: left">
+            </div>
+            <script src="js/slideshow.js"></script>
         </div>
+
 
         <div id="tbl1" style="position: relative; z-index: 3;">
             <div class="rounded">
@@ -139,7 +200,7 @@
                         </ul>
                     </li>
 
-                    <li>Claviaturi
+                    <li><a>Claviaturi</a>
                         <ul>
                             <li><a href="#">Claviaturi</a>
                             <li><a href="#">Piane</a>
@@ -148,7 +209,7 @@
                         </ul>
                     </li>
 
-                    <li>Tobe/Percutie
+                    <li><a>Tobe/Percutie</a>
                         <ul>
                             <li><a href="#">Claviaturi</a>
                             <li><a href="#">Piane</a>
@@ -157,7 +218,7 @@
                         </ul>
                     </li>
 
-                    <li>Accesorii
+                    <li><a>Accesorii</a>
                         <ul>
                             <li><a href="#">Claviaturi</a>
                             <li><a href="#">Piane</a>
@@ -166,7 +227,6 @@
                         </ul>
                     </li>
                 </ul>
-
             </div>
 
         </div>
@@ -174,235 +234,307 @@
         <div id="ev">
             <ul style="position: relative; z-index: 3">
                 <li class="card">
-                    <img src="res/slideshow/1.jpg" alt="Denim Jeans" style="width:100%;">
+                    <img src="res/slideshow/1.jpg" alt="anunt" style="width:100%;">
                     <h1>Chitara</h1>
                     <p class="price">1000 Lei</p>
                     <p>Suuuuper buna</p>
-                    <p><button>Add to Cart</button></p>
+                    <p>
+                        <button>Add to Cart</button>
+                    </p>
                 </li>
                 <li class="card">
-                    <img src="res/slideshow/1.jpg" alt="Denim Jeans" style="width:100%;">
+                    <img src="res/slideshow/1.jpg" alt="anunt" style="width:100%;">
                     <h1>Chitara</h1>
                     <p class="price">1000 Lei</p>
                     <p>Suuuuper buna</p>
-                    <p><button>Add to Cart</button></p>
+
+                    <p>
+                        <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+                        <button>Add to Cart</button>
+                    </p>
                 </li>
                 <li class="card">
-                    <img src="res/slideshow/1.jpg" alt="Denim Jeans" style="width:100%;">
+                    <img src="res/slideshow/1.jpg" alt="anunt" style="width:100%;">
                     <h1>Chitara</h1>
                     <p class="price">1000 Lei</p>
                     <p>Suuuuper buna</p>
-                    <p><button>Add to Cart</button></p>
+                    <p>
+                        <button>Add to Cart</button>
+                    </p>
                 </li>
                 <li class="card">
-                    <img src="res/slideshow/1.jpg" alt="Denim Jeans" style="width:100%;">
+                    <img src="res/slideshow/1.jpg" alt="anunt" style="width:100%;">
                     <h1>Chitara</h1>
                     <p class="price">1000 Lei</p>
                     <p>Suuuuper buna</p>
-                    <p><button>Add to Cart</button></p>
+                    <p>
+                        <button>Add to Cart</button>
+                    </p>
                 </li>
                 <li class="card">
-                    <img src="res/slideshow/1.jpg" alt="Denim Jeans" style="width:100%;">
+                    <img src="res/slideshow/1.jpg" alt="anunt" style="width:100%;">
                     <h1>Chitara</h1>
                     <p class="price">1000 Lei</p>
                     <p>Suuuuper buna</p>
-                    <p><button>Add to Cart</button></p>
+                    <p>
+                        <button>Add to Cart</button>
+                    </p>
                 </li>
                 <li class="card">
-                    <img src="res/slideshow/1.jpg" alt="Denim Jeans" style="width:100%;">
+                    <img src="res/slideshow/1.jpg" alt="anunt" style="width:100%;">
                     <h1>Chitara</h1>
                     <p class="price">1000 Lei</p>
                     <p>Suuuuper buna</p>
-                    <p><button>Add to Cart</button></p>
+                    <p>
+                        <button>Add to Cart</button>
+                    </p>
+                </li>
+                <li class="card">
+                    <img src="res/slideshow/1.jpg" alt="anunt" style="width:100%;">
+                    <h1>Chitara</h1>
+                    <p class="price">1000 Lei</p>
+                    <p>Suuuuper buna</p>
+                    <p>
+                        <button>Add to Cart</button>
+                    </p>
+                </li>
+                <li class="card">
+                    <img src="res/slideshow/1.jpg" alt="anunt" style="width:100%;">
+                    <h1>Chitara</h1>
+                    <p class="price">1000 Lei</p>
+                    <p>Suuuuper buna</p>
+                    <p>
+                        <button>Add to Cart</button>
+                    </p>
                 </li>
             </ul>
         </div>
 
         <div id="an">
-            <img src="res/2021-calendar.png" alt="prez" style="width: auto; margin-left: 25%; height: 400px; float: left; z-index: 2; opacity: 100%; position: relative;">
+            <ul style="margin-left: 100px">
+                <li style=" list-style: none"><a><img src="res/free_shipping.png.jpg" alt=""
+                                                      style="width: 200px; float: left; margin-top: 10px; margin-right: 160px"></a>
+                </li>
+                <li style=" list-style: none"><a><img src="res/money_back.png.png" alt=""
+                                                      style="width: 200px; float: left; margin-right: 190px"></a></li>
+                <li style=" list-style: none"><a><img src="res/quality.png" alt=""
+                                                      style="width: 140px; float: left; margin-right: 200px"></a></li>
+                <li style=" list-style: none"><a><img src="res/support.png" alt=""
+                                                      style="width: 140px; float: left;"></a></li>
+
+            </ul>
         </div>
 
         <div id="usr_onl">
-            <img src="res/usr_onl.jpg" alt="prez" style="width: auto; height: 400px; float: left; z-index: 2; opacity: 100%; position: relative;">
+            <img src="res/usr_onl.jpg" alt="prez"
+                 style="width: auto; height: 400px; float: left; z-index: 2; opacity: 100%; position: relative;">
         </div>
 
-        <div id="usr_data">
-            <img src="res/usr_data.png" alt="prez" style="width: auto; margin-left: 25%; height: 400px; float: left; z-index: 2; opacity: 100%; position: relative;">
+        <div id="usr_data" style="margin-left: 100px">
+            <ul style="list-style: none; display: inline-flex; margin-right: 10px; opacity: 85%; margin-bottom: 0;">
+                <li style="margin-right:90px; float: left; width: 100px; background: #4D4D59; border-left: solid; border-right: solid; border-top: solid">
+                    <a href="https://www.youtube.com/embed/z9Elx4nCTgk" target="iframe" style="color: white">DO NOT USE
+                        YOUTUBE</a></li>
+                <li style="margin-right:90px; width: 100px; background: #4D4D59;  border-left: solid; border-right: solid; border-top: solid">
+                    <a href="https://www.youtube.com/embed/z9Elx4nCTgk" target="iframe" style="color: white;">DO NOT USE
+                        YOUTUBE</a></li>
+                <li style="width: 100px; background: #4D4D59;  border-left: solid; border-right: solid; border-top: solid">
+                    <a href="https://www.youtube.com/embed/z9Elx4nCTgk" target="iframe" style="color: white;">DO NOT USE
+                        YOUTUBE</a></li>
+            </ul>
+            <div style="display: flex;  flex-wrap: nowrap;">
+                <div>
+                    <iframe width="560" height="315" name="iframe"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
 
-        <div id="site_data">
-            <img src="res/site_data.jpg" alt="prez" style="width: 400px; margin-left: 25%; height: 400px; float: left; z-index: 2; opacity: 100%; position: relative;">
+        <div id="site_data" style="width: 300px">
+            <img src="res/site_data.jpg" alt="prez"
+                 style="width: 300px; margin-left: 25%; height: 400px; float: left; z-index: 2; opacity: 100%; position: relative;">
         </div>
 
         <div id="extra">
             <ul style="position: relative; z-index: 3">
                 <li class="card">
-                    <img src="res/slideshow/1.jpg" alt="Denim Jeans" style="width:100%;">
+                    <img src="res/slideshow/1.jpg" alt="anunt_1" style="width:100%;">
                     <h1>Chitara</h1>
                     <p class="price">1000 Lei</p>
                     <p>Suuuuper buna</p>
-                    <p><button>Add to Cart</button></p>
+                    <p>
+                        <button>Add to Cart</button>
+                    </p>
                 </li>
                 <li class="card">
-                    <img src="res/slideshow/1.jpg" alt="Denim Jeans" style="width:100%;">
+                    <img src="res/slideshow/1.jpg" alt="anunt_2" style="width:100%;">
                     <h1>Chitara</h1>
                     <p class="price">1000 Lei</p>
                     <p>Suuuuper buna</p>
-                    <p><button>Add to Cart</button></p>
+                    <p>
+                        <button>Add to Cart</button>
+                    </p>
                 </li>
                 <li class="card">
-                    <img src="res/slideshow/1.jpg" alt="Denim Jeans" style="width:100%;">
+                    <img src="res/slideshow/1.jpg" alt="anunt_3" style="width:100%;">
                     <h1>Chitara</h1>
                     <p class="price">1000 Lei</p>
                     <p>Suuuuper buna</p>
-                    <p><button>Add to Cart</button></p>
+                    <p>
+                        <button>Add to Cart</button>
+                    </p>
                 </li>
                 <li class="card">
-                    <img src="res/slideshow/1.jpg" alt="Denim Jeans" style="width:100%;">
+                    <img src="res/slideshow/1.jpg" alt="anunt_4" style="width:100%;">
                     <h1>Chitara</h1>
                     <p class="price">1000 Lei</p>
                     <p>Suuuuper buna</p>
-                    <p><button>Add to Cart</button></p>
+                    <p>
+                        <button>Add to Cart</button>
+                    </p>
                 </li>
                 <li class="card">
-                    <img src="res/slideshow/1.jpg" alt="Denim Jeans" style="width:100%;">
+                    <img src="res/slideshow/1.jpg" alt="anunt_5" style="width:100%;">
                     <h1>Chitara</h1>
                     <p class="price">1000 Lei</p>
                     <p>Suuuuper buna</p>
-                    <p><button>Add to Cart</button></p>
+                    <p>
+                        <button>Add to Cart</button>
+                    </p>
                 </li>
             </ul>
         </div>
 
     </div>
 
-   <!-- &lt;!&ndash;<div class="container">
-        <div id="clr-left">1</div>
-        <div id="p1"><img src="res/slideshow/1.jpg">1</div>
-        <div id="p2"><img src="res/slideshow/1.jpg">2</div>
-        <div id="p3"><img src="res/slideshow/1.jpg">3/a>
-        <div id="p4"><img src="res/slideshow/1.jpg">4</div>
-        <div id="clr-right">2</div>
-    </div>&ndash;&gt;
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <section id="categorii">
-        <h2 style="color: darkgray;">Categorii</h2>
-        <section>
-            <h3 id="chb" style="margin-left: 20px; color: darkgray;">Chitara/Bass</h3>
-            <q style="margin-left: 40px; color: darkgray;">I started out playing guitar because Jimi Hendrix was my hero, so my roots
-                were really based on Jimi Hendrix and his style of playing.
+    <!-- &lt;!&ndash;<div class="container">
+         <div id="clr-left">1</div>
+         <div id="p1"><img src="res/slideshow/1.jpg">1</div>
+         <div id="p2"><img src="res/slideshow/1.jpg">2</div>
+         <div id="p3"><img src="res/slideshow/1.jpg">3/a>
+         <div id="p4"><img src="res/slideshow/1.jpg">4</div>
+         <div id="clr-right">2</div>
+     </div>&ndash;&gt;
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <section id="categorii">
+         <h2 style="color: darkgray;">Categorii</h2>
+         <section>
+             <h3 id="chb" style="margin-left: 20px; color: darkgray;">Chitara/Bass</h3>
+             <q style="margin-left: 40px; color: darkgray;">I started out playing guitar because Jimi Hendrix was my hero, so my roots
+                 were really based on Jimi Hendrix and his style of playing.
 
-                – Joe Satriani.</q>
-            <ul style="margin-left: 60px; color: darkgray;">
-                <li>Acustice</li>
-                <li>Semi-acustice</li>
-                <li>Electrice</li>
-            </ul>
-        </section>
+                 – Joe Satriani.</q>
+             <ul style="margin-left: 60px; color: darkgray;">
+                 <li>Acustice</li>
+                 <li>Semi-acustice</li>
+                 <li>Electrice</li>
+             </ul>
+         </section>
 
-        <section>
-            <h3 id="clv" style="margin-left: 20px; color: darkgray;">Claviaturi</h3>
-            <q style="margin-left: 40px; color: darkgray;">The piano is able to communicate the subtlest universal truths by means of
-                wood, metal and vibrating air. – Kenneth Miller
-            </q>
-            <ul style="margin-left: 60px; color: darkgray;">
-                <li>Claviaturi</li>
-                <li>Piane</li>
-                <li>MIDI</li>
-            </ul>
-        </section>
+         <section>
+             <h3 id="clv" style="margin-left: 20px; color: darkgray;">Claviaturi</h3>
+             <q style="margin-left: 40px; color: darkgray;">The piano is able to communicate the subtlest universal truths by means of
+                 wood, metal and vibrating air. – Kenneth Miller
+             </q>
+             <ul style="margin-left: 60px; color: darkgray;">
+                 <li>Claviaturi</li>
+                 <li>Piane</li>
+                 <li>MIDI</li>
+             </ul>
+         </section>
 
-        <section>
-            <h3 id="tobe" style="margin-left: 20px; color: darkgray;">Tobe/Percutie</h3>
-            <q style="margin-left: 40px; color: darkgray;">Playing drums, for me, is like breathing. It's like thinking. It's like eating.
-                It's like walking. - Joey Jordison
-            </q>
-            <ul style="margin-left: 60px; color: darkgray;">
-                <li>acustice</li>
-                <li>electronice</li>
-                <li>cinele</li>
-            </ul>
-        </section>
+         <section>
+             <h3 id="tobe" style="margin-left: 20px; color: darkgray;">Tobe/Percutie</h3>
+             <q style="margin-left: 40px; color: darkgray;">Playing drums, for me, is like breathing. It's like thinking. It's like eating.
+                 It's like walking. - Joey Jordison
+             </q>
+             <ul style="margin-left: 60px; color: darkgray;">
+                 <li>acustice</li>
+                 <li>electronice</li>
+                 <li>cinele</li>
+             </ul>
+         </section>
 
-        <section>
-            <h3 id="accs" style="margin-left: 20px; color: darkgray;">Acesorii</h3>
-            <q style="margin-left: 40px; color: darkgray;">Without music, life would be a mistake. - Friedrich Nietzsche
-            </q>
-            <ul style="margin-left: 60px; color: darkgray;">
-                <li>casti</li>
-                <li>acordoare si metronoame</li>
-                <li>studio</li>
-            </ul>
-        </section>
-    </section>
+         <section>
+             <h3 id="accs" style="margin-left: 20px; color: darkgray;">Acesorii</h3>
+             <q style="margin-left: 40px; color: darkgray;">Without music, life would be a mistake. - Friedrich Nietzsche
+             </q>
+             <ul style="margin-left: 60px; color: darkgray;">
+                 <li>casti</li>
+                 <li>acordoare si metronoame</li>
+                 <li>studio</li>
+             </ul>
+         </section>
+     </section>
 
-    <section id="despre">
-        <h2 style="color: darkgray;">Despre</h2>
-        <p style="margin-left: 20px; color: darkgray;"> Magazin de instrumente muzicale </p>
-
-
-    </section>
-
-    <section id="faq">
-
-        <h2><abbr title="frequently asked questions" style="color: darkgray">FAQ</abbr></h2>
-
-        <details class="faq">
-            <summary>Cate tipuri de chitare acustice exista?</summary>
-            <p>
-                <b>Chitarele</b> <b>acustice</b> se împart în <b>chitare</b> <b>clasice</b> (cu <b>corzi de nylon</b>,
-                folosite în studiul <b>muzicii</b> clasice)
-                și
-                chitare acustice, cu <b>corzi de oțel</b>, folosite pentru majoritatea genurilor <b>muzicale</b>. Deși
-                există o
-                preconcepție că o <b>chitară clasică</b> este potrivită unui începător datorită <b>corzi</b>lor ceva mai
-                moi, este
-                recomandat ca primul <b>instrument</b> să fie ales nu după acest criteriu ci după muzica ce urmează să
-                fie
-                studiată
-            </p>
-        </details>
+     <section id="despre">
+         <h2 style="color: darkgray;">Despre</h2>
+         <p style="margin-left: 20px; color: darkgray;"> Magazin de instrumente muzicale </p>
 
 
-        <details class="faq">
-            <summary>Dupa ce criterii trebuie sa aleg chitara acustica?</summary>
-            <p>
-                Este de recomandat ca instrumentul să fie ales în funcție de muzica ce urmează să fie cântată – cel mai
-                potrivit instrument pentru muzica clasică este chitara cu corzi de nylon însă pentru mai toate genurile
-                rămase, soluția cea mai bună este de regulă o chitară acustica tip western, cu o cutie de rezonanță mare
-                și
-                corzi de oțel. Bineînțeles, recomandarea profesorului este foarte importantă.
-            </p>
-            <a href = "https://www.youtube.com/embed/z9Elx4nCTgk" target="iframe">DO NOT USE YOUTUBE</a>
-            <a href = "https://www.youtube.com/watch?v=MHj9XlV3fFg" target="iframe">DRUMS SOLO</a>
-            <iframe width="560" height="315" name="iframe"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-        </details>
+     </section>
+
+     <section id="faq">
+
+         <h2><abbr title="frequently asked questions" style="color: darkgray">FAQ</abbr></h2>
+
+         <details class="faq">
+             <summary>Cate tipuri de chitare acustice exista?</summary>
+             <p>
+                 <b>Chitarele</b> <b>acustice</b> se împart în <b>chitare</b> <b>clasice</b> (cu <b>corzi de nylon</b>,
+                 folosite în studiul <b>muzicii</b> clasice)
+                 și
+                 chitare acustice, cu <b>corzi de oțel</b>, folosite pentru majoritatea genurilor <b>muzicale</b>. Deși
+                 există o
+                 preconcepție că o <b>chitară clasică</b> este potrivită unui începător datorită <b>corzi</b>lor ceva mai
+                 moi, este
+                 recomandat ca primul <b>instrument</b> să fie ales nu după acest criteriu ci după muzica ce urmează să
+                 fie
+                 studiată
+             </p>
+         </details>
 
 
-        <details class="faq">
-            <summary>Care sunt cele mai bune branduri de chitare acustice?</summary>
-            <p>
-                <q>Preferăm Ibanez, Takamine, PRS și Pulse</q>
-            </p>
-        </details>
+         <details class="faq">
+             <summary>Dupa ce criterii trebuie sa aleg chitara acustica?</summary>
+             <p>
+                 Este de recomandat ca instrumentul să fie ales în funcție de muzica ce urmează să fie cântată – cel mai
+                 potrivit instrument pentru muzica clasică este chitara cu corzi de nylon însă pentru mai toate genurile
+                 rămase, soluția cea mai bună este de regulă o chitară acustica tip western, cu o cutie de rezonanță mare
+                 și
+                 corzi de oțel. Bineînțeles, recomandarea profesorului este foarte importantă.
+             </p>
+             <a href = "https://www.youtube.com/embed/z9Elx4nCTgk" target="iframe">DO NOT USE YOUTUBE</a>
+             <a href = "https://www.youtube.com/watch?v=MHj9XlV3fFg" target="iframe">DRUMS SOLO</a>
+             <iframe width="560" height="315" name="iframe"
+                     title="YouTube video player" frameborder="0"
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                     allowfullscreen></iframe>
+         </details>
+
+         <details class="faq">
+             <summary>Care sunt cele mai bune branduri de chitare acustice?</summary>
+             <p>
+                 <q>Preferăm Ibanez, Takamine, PRS și Pulse</q>
+             </p>
+         </details>
 
 
-        <details class="faq" >
-            <summary>Ce genuri de muzica se pot canta la o chitara acustica?</summary>
-            <p>
-                Chitara acustică este un instrument foarte polivalent, folosit în toate genurile muzicale, de la folk la
-                rock, blues și chiar muzică populară
-            </p>
-        </details>
+         <details class="faq" >
+             <summary>Ce genuri de muzica se pot canta la o chitara acustica?</summary>
+             <p>
+                 Chitara acustică este un instrument foarte polivalent, folosit în toate genurile muzicale, de la folk la
+                 rock, blues și chiar muzică populară
+             </p>
+         </details>
 
-    </section>-->
+     </section>-->
 </main>
 
 
@@ -426,8 +558,10 @@
 
                     <a href="https://www.facebook.com" target="_blank" class="fa fa-facebook"
                        style="margin-right:20px; inset-inline: auto"></a>
-                    <a href="https://www.instagram.com" target="_blank" class="fa fa-instagram" style="margin-right:20px"></a>
-                    <a href="https://www.twitter.com" target="_blank" class="fa fa-twitter" style="margin-right:20px"></a>
+                    <a href="https://www.instagram.com" target="_blank" class="fa fa-instagram"
+                       style="margin-right:20px"></a>
+                    <a href="https://www.twitter.com" target="_blank" class="fa fa-twitter"
+                       style="margin-right:20px"></a>
                 </div>
                 <small style="color: #4D4D59">
                     &#169; Victor Andrei Cotescu
