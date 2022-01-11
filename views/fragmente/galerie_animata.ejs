@@ -1,0 +1,111 @@
+<style>
+    div#galerie_animata {
+        margin-bottom: 10px;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    .galerie{
+        width: 500px;
+        height: 250px;
+        border: 1px solid black;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .galerie figure {
+        position: relative;
+        width: 500px;
+        height: 250px;
+    }
+
+    picture > img {
+        width:500px;
+        height: 250px;
+    }
+
+    #galerie_animata .animat {
+        display: grid;
+        width: 800px;
+        grid-template-columns: 500px 500px 500px;
+        grid-template-rows: 250px 250px 250px;
+        grid-row-gap: 0;
+        grid-column-gap: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation-name: anim;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 10s;
+    }
+
+    .animat:hover {
+         animation-play-state: paused;
+     }
+
+    @keyframes anim {
+        0% {
+            transform: scale(1);
+            top: 0;
+            left: 0;
+        }
+        16%{
+            transform: scale(0.5);
+            top: -250px;
+            left: -400px;
+        }
+
+        32%{
+            transform: scale(1);
+            top: -500px;
+            left: 0;
+        }
+
+        48%{
+            transform: scale(0.5);
+            top: -250px;
+            left: -250px;
+        }
+        64%{
+            transform: scale(1);
+            top: 0;
+            left: 0;
+        }
+
+        82%{
+            transform: scale(0.5);
+            top: -250px;
+            left: -250px;
+        }
+
+        100% {
+            transform: scale(1);
+            top: -500px;
+            left: -500px;
+        }
+
+    }
+</style>
+
+<div id="galerie_animata" class="galerie">
+    <div class="animat">
+        <%
+        var counter = 0
+        for (let imag of locals.imagini) {
+
+        %>
+            <figure class="elem">
+                <picture>
+                    <source srcset="/<%- locals.cale %>" media="(max-width:700px)"/>
+                    <img src="/<%- locals.cale + "/" + imag.cale_fisier %>" alt="text"/>
+                </picture>
+                <figcaption> <%- imag.text_descriere %> </figcaption>
+            </figure>
+
+        <%
+        }
+        %>
+    </div>
+</div>

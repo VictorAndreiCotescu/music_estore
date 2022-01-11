@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ro" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="description" content="Mgazin online de instrumente muzicale">
+    <meta name="keywords"
+          content="muzica, instrument, instrumente, chitara, electrica, acustica, electro-acustica, corzi, corzi de chitara, corzi de bass, ibanez, warwick, fender, squire, jazz, pian, claviatura, midi, pian electric, pianina, orga, korg, roland, tobe, bete, fete tobe">
+
+    <%-
+    include("../fragmente/head.ejs")
+    %>
+    <title>Musxcore</title>
+
+</head>
+
+<body>
+
+<%-
+include("../fragmente/header.ejs")
+%>
+
+
+<main>
+    <div>
+        <h2>Progam</h2>
+        <div class="container" style="overflow: -moz-scrollbars-horizontal">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sediu</th>
+                        <th>Luni</th>
+                        <th>Marti</th>
+                        <th>Miercuri</th>
+                        <th>Joi</th>
+                        <th>Vineri</th>
+                        <th>Sambata</th>
+                        <th>Duminica</th>
+                    </tr>
+                </thead>
+                <tbody><tr>
+                    <td>Bucuresti</td>
+                    <td>8:00-22:00</td>
+                    <td>8:00-22:00</td>
+                    <td>8:00-22:00</td>
+                    <td>8:00-22:00</td>
+                    <td>8:00-22:00</td>
+                    <td>9:00-16:00</td>
+                    <td>9:00-16:00</td>
+                </tr>
+                <tr>
+                    <td>Pitesti</td>
+                    <td>8:00-22:00</td>
+                    <td>8:00-22:00</td>
+                    <td>8:00-22:00</td>
+                    <td>8:00-22:00</td>
+                    <td>8:00-22:00</td>
+                    <td>9:00-16:00</td>
+                    <td>9:00-16:00</td>
+                </tr>
+                <tr>
+                    <td>Brasov</td>
+                    <td>8:00-22:00</td>
+                    <td>8:00-22:00</td>
+                    <td>8:00-22:00</td>
+                    <td>8:00-22:00</td>
+                    <td>8:00-22:00</td>
+                    <td>9:00-16:00</td>
+                    <td>9:00-16:00</td>
+                </tr>
+                <tr>
+                    <td>Sibiu</td>
+                    <td>8:00-22:00</td>
+                    <td>8:00-22:00</td>
+                    <td>8:00-22:00</td>
+                    <td>8:00-22:00</td>
+                    <td>8:00-22:00</td>
+                    <td>9:00-16:00</td>
+                    <td>9:00-16:00</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th colspan="8">Programul poate fi afectat de sarbatori legale/covid</th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+
+
+    </div>
+    <div class="sticky">
+        <div>
+            <div class="tooltip" onclick="location.href='#'" style="text-decoration: none">
+                <div class="triangle">
+                    <span class="tooltiptext">
+                        Inceputul paginii
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+<%-
+include("../fragmente/footer.ejs")
+%>
+
+
+</body>
+
+
+</html>

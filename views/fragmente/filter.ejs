@@ -1,0 +1,98 @@
+<div id="prez" style="font-family: 'Roboto', serif ">
+
+        <div class="prez_element">
+            <img src="res/slideshow/numa_x_banner_key.jpg" alt="prez"
+                 style="width: 1903px; height: 500px; z-index: 0; margin-left: 0; opacity: 100%; position: relative; float: right">
+        </div>
+        <div class="prez_element">
+            <img src="res/slideshow/2d0e11491a84fe1a05fda96ae164884f5d260f00_Katana100-1.jpg" alt="prez"
+                 style="width: 1903px; height: 500px; z-index: 0; margin-left: 0; opacity: 100%; position: relative; float: right">
+        </div>
+        <div class="prez_element">
+            <img src="res/slideshow/bfde4ce29b83053b8409ad2097f415196ae1c19d_Tobe%20electronice%20yamha%20DTX10.jpg"
+                 alt="prez"
+                 style="width: 1903px; height: 500px; z-index: 0; margin-left: 0; opacity: 100%; position: relative; float: right">
+        </div>
+        <script src="js/slideshow.js"></script>
+</div>
+
+
+<div id="tbl1" style="position: relative; z-index: 3;">
+    <div class="rounded">
+        <ul id="side-nav">
+            <li>
+                <input type="checkbox" id="ch_bs" name="ch_bs">
+                <label for="ch_bs">Chitara/Bass</label>
+                <ul>
+                    <li><input type="checkbox" id="ch_ac" name="ch_ac">
+                        <label for="ch_ac">Acustice</label></li>
+                    <li><input type="checkbox" id="ch_el" name="ch_el">
+                        <label for="ch_el">Electrice</label></li>
+                    <li><input type="checkbox" id="ch_elac" name="ch_elac">
+                        <label for="ch_elac">Electro-Acustice</label></li>
+                </ul>
+            </li>
+
+            <li>
+                <input type="checkbox" id="claviaturi" name="claviaturi">
+                <label for="claviaturi">Claviaturi</label>
+                <ul>
+                    <li><input type="checkbox" id="clav" name="clav">
+                        <label for="clav">Claviaturi</label></li>
+                    <li><input type="checkbox" id="pian" name="pian">
+                        <label for="pian">Piane</label></li>
+                    <li><input type="checkbox" id="pian_d" name="pian_d">
+                        <label for="pian_d">Piane Digitale</label></li>
+                    <li><input type="checkbox " id="midi" name="midi">
+                        <label for="midi">MIDI</label></li>
+                </ul>
+            </li>
+
+            <li>
+                <input type="checkbox" id="tobe" name="tobe">
+                <label for="tobe">Tobe/Percutie</label>
+                <ul>
+                    <li><input type="checkbox" id="tobe_ac" name="tobe_ac">
+                        <label for="tobe_ac">Tobe</label></li>
+                    <li><input type="checkbox" id="tobe_el" name="tobe_el">
+                        <label for="tobe_el">Tobe electrice</label></li>
+                    <li><input type="checkbox" id="cinei" name="cinei">
+                        <label for="cinei">Cinei</label></li>
+                </ul>
+            </li>
+
+            <li><input type="checkbox" id="acc" name="acc">
+                <label for="acc">Accesorii</label>
+                <ul>
+                    <li><input type="checkbox" id="acc_ch" name="acc_ch">
+                        <label for="acc_ch">Chitara</label></li>
+                    <li><input type="checkbox" id="acc_pi" name="acc_pi">
+                        <label for="acc_pi">Piane</label></li>
+                    <li><input type="checkbox" id="acc_tb" name="acc_tb">
+                        <label for="acc_tb">Tobe</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="99" value="1" class="slider" id="range_min">
+                    <input type="range" min="2" max="99" value="98" class="slider" id="range_max">
+                    <p>Pret minim: <span id="max_value"></span></p>
+                    <p>Pret maxim: <span id="min_value"></span></p>
+                </div>
+            </li>
+
+            <li>
+                <input type="button" id="aplica" name="aplica" value="aplica">
+            </li>
+        </ul>
+    </div>
+</div>
+node . 
+<script src="/js/apply_filters.js"></script>
+<script src="/js/range_selector.js"></script>
+
+<style>
+    div > p{
+        font-size: 25px;
+    }
+</style>

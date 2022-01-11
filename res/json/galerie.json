@@ -1,0 +1,65 @@
+{
+  "cale_galerie": "res/galerie",
+  "imagini": [
+    {
+      "cale_fisier": "logo.webp",
+      "titlu": "imagine",
+      "text_descriere": "descriere",
+      "anotimp": "iarna"
+    },
+    {
+      "cale_fisier": "logo.webp",
+      "titlu": "imagine",
+      "text_descriere": "descriere",
+      "anotimp": "iarna"
+    },
+    {
+      "cale_fisier": "logo.webp",
+      "titlu": "imagine",
+      "text_descriere": "descriere",
+      "anotimp": "iarna"
+    },
+    {
+      "cale_fisier": "logo.webp",
+      "titlu": "imagine",
+      "text_descriere": "descriere",
+      "anotimp": "iarna"
+    },
+    {
+      "cale_fisier": "logo.webp",
+      "titlu": "imagine",
+      "text_descriere": "descriere",
+      "anotimp": "iarna"
+    },
+    {
+      "cale_fisier": "logo.webp",
+      "titlu": "imagine",
+      "text_descriere": "descriere",
+      "anotimp": "iarna"
+    },
+    {
+      "cale_fisier": "logo.webp",
+      "titlu": "imagine",
+      "text_descriere": "descriere",
+      "anotimp": "iarna"
+    },
+    {
+      "cale_fisier": "logo.webp",
+      "titlu": "imagine",
+      "text_descriere": "descriere",
+      "anotimp": "iarna"
+    },
+    {
+      "cale_fisier": "logo.webp",
+      "titlu": "imagine",
+      "text_descriere": "descriere",
+      "anotimp": "iarna"
+    },
+    {
+      "cale_fisier": "logo.webp",
+      "titlu": "imagine",
+      "text_descriere": "descriere",
+      "anotimp": "iarna"
+    }
+  ]
+}

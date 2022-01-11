@@ -1,0 +1,51 @@
+<%-
+    include("../fragmente/head.ejs")
+%>
+
+<%-
+    include("../fragmente/header.ejs")
+%>
+
+
+<style>
+    .container {
+        grid-template-areas:    "prez prez prez prez"
+                                "tbl1 tbl1 ev ev"
+                                "tbl1 tbl1 ev ev"
+                                "tbl1 tbl1 ev ev"
+                                "tbl1 tbl1 ev ev";
+    }
+</style>
+<div class="container" style="margin-top: 50px">
+    <%-
+    include("../fragmente/filter.ejs")
+    %>
+    <div id="ev">
+        <ul style="position: relative; z-index: 3">
+            <% for (let prod of locals.produse) { %>
+
+                <li class="card">
+
+                    <img src="<%- prod.img_path %>" alt="anunt">
+
+                    <h1 class="font-effect-3d-float" style="color: black"><%- prod.nume %></h1>
+
+                    <p class="price"><%- prod.pret %> </p>
+
+                    <p>Suuuuper buna</p>
+
+                    <div>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-info-circle"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <p><button>Add to Cart</button></p>
+
+                </li>
+
+            <% } %>
+        </ul>
+    </div>
+</div>
+

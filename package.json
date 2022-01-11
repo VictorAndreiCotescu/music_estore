@@ -1,0 +1,60 @@
+{
+  "name": "music_estore",
+  "version": "1.0.0",
+  "description": "Online musical instruments shop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictorAndreiCotescu/music_estore.git"
+  },
+  "keywords": [
+    "muzica",
+    "instrument",
+    "instrumente",
+    "chitara",
+    "electrica",
+    "acustica",
+    "electro-acustica",
+    "corzi",
+    "corzi",
+    "de",
+    "chitara",
+    "corzi",
+    "de",
+    "bass",
+    "ibanez",
+    "warwick",
+    "fender",
+    "squire",
+    "jazz",
+    "pian",
+    "claviatura",
+    "midi",
+    "pian",
+    "electric",
+    "pianina",
+    "orga",
+    "korg",
+    "roland",
+    "tobe",
+    "bete",
+    "fete",
+    "tobe"
+  ],
+  "author": "Victor Andrei Cotescu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VictorAndreiCotescu/music_estore/issues"
+  },
+  "homepage": "https://github.com/VictorAndreiCotescu/music_estore#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "pg": "^8.7.1",
+    "sass": "^1.45.0",
+    "sharp": "^0.29.3"
+  }
+}

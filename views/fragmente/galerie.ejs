@@ -1,0 +1,90 @@
+<style>
+
+    div#grid_galerie > figure:nth-child(1){
+        grid-area: 1/1/1/2;
+    }
+    div#grid_galerie > figure:nth-child(2) {
+        grid-area: 1/2/1/3;
+    }
+    div#grid_galerie > figure:nth-child(3) {
+        grid-area: 1/3/1/4;
+    }
+    div#grid_galerie > figure:nth-child(4) {
+        grid-area: 2/1/2/2;
+    }
+    div#grid_galerie > figure:nth-child(5) {
+        grid-area: 2/3/2/4;
+    }
+    div#grid_galerie > figure:nth-child(6) {
+        grid-area: 3/1/3/2;
+    }
+    div#grid_galerie > figure:nth-child(7) {
+        grid-area: 3/2/3/3;
+    }
+    div#grid_galerie > figure:nth-child(8) {
+        grid-area: 3/3/3/4;
+    }
+    div#grid_galerie > figure:nth-child(9) {
+        grid-area: 4/1/4/2;
+    }
+    div#grid_galerie > figure:nth-child(10) {
+        grid-area: 4/3/4/4;
+    }
+
+    #grid_galerie img{
+        transform: scale(1);
+        opacity: 50%;
+        transition: all ease-in-out .5s;
+    }
+
+    @media screen and (min-width: 600px) {
+        div#grid_galerie{
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: 100%;
+        }
+    }
+
+    @media screen and (min-width: 1300px) {
+        div#grid_galerie{
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+    }
+
+    @media screen and (min-width: 1600px) {
+        div#grid_galerie{
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+        } 
+    }
+
+
+    div#grid_galerie img:hover{
+        transform: scale(1.3);
+        opacity: 100%;
+        transition: all ease-in-out .5s;
+    }
+</style>
+
+<section id="galerie_statica">
+    <h2> GALERIE </h2>
+    <div id="grid_galerie">
+        <%
+        var counter = 0
+        for (let imag of locals.imagini) {
+        %>
+            <figure>
+                <picture>
+                    <source srcset="/<%- locals.cale %>" media="(max-width:700px)"/>
+                    <img src="/<%- locals.cale + "/" + imag.cale_fisier %>" alt="text"/>
+                </picture>
+                <figcaption> <%- imag.text_descriere %> </figcaption>
+            </figure>
+
+        <% } %>
+    </div>
+    <script src="js/galerie_animata.js"></script>
+</section>

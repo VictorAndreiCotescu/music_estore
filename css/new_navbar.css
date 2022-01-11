@@ -51,11 +51,12 @@
     #nav li:hover i.fa-bars {
         background: #C7C7C7;
         color: #4D4D59;
-        transition: all 0.4s ease-out;
+        transition: all 0.7s ease-out;
     }
 
 
     #nav li:hover i.fa-shopping-cart {
+
         background: #C7C7C7;
         color: #4D4D59;
         width: 110%;
@@ -227,6 +228,7 @@
 }
 
 #side-nav li > a{
+
     color: white;
     list-style: none;
     font-size: 30px;
@@ -255,10 +257,10 @@
     color: #4D4D59;
 
 }*/
-#side-nav li>a:hover li>a{
-    display:block;
-    background:#C7C7C7;
-}
+/*#side-nav li>a:hover li>a{*/
+/*    display:block;*/
+/*    background:#C7C7C7;*/
+/*}*/
 .rounded > ul{
     border-radius: 0 25px 25px 0;
     padding: 20px;

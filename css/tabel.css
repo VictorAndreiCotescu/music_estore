@@ -1,0 +1,27 @@
+table{
+    border: 5px solid black;
+    text-align: center;
+    padding: 5px;
+    border-collapse: collapse;
+    margin-left: 100px;
+    margin-bottom: 100px;
+}
+
+th, td, tr{
+    border: 1px solid black;
+    outline: 0 dotted #4D4D59;
+    transition: all ease-in-out 0.5s;
+    padding: 10px;
+}
+
+tr > td:hover{
+    outline: 3px dashed #4D4D59;
+    transition: all ease-in-out 0.5s;
+}
+
+tr:nth-child(2n){
+    background-color: #C7C7C7;
+}
+tr:nth-child(2n-1){
+    background-color: #8f8166;
+}
