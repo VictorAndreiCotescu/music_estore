@@ -4,7 +4,8 @@
   "description": "Online musical instruments shop",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -57,5 +58,8 @@
     "pg": "^8.7.1",
     "sass": "^1.45.0",
     "sharp": "^0.29.3"
+  },
+  "engines":  {
+    "node": "16.x"
   }
 }

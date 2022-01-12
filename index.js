@@ -9,12 +9,23 @@ const sass = require('sass')
 const date = new Date()
 let app = express()
 
+// let client = new Client({
+//     user:       'victor',
+//     password:   'parola123',
+//     host:       'localhost',
+//     port:       5432,
+//     database:   'postgres'
+// });
+
 let client = new Client({
-    user:       'victor',
-    password:   'parola123',
-    host:       'localhost',
+    user:       'qrdelcmsadltvm',
+    password:   '79d211e057a7ce9d87134ecef7d9decbfece5b91409c0569f92e1782113419da',
+    host:       'ec2-35-169-119-56.compute-1.amazonaws.com',
     port:       5432,
-    database:   'postgres'
+    database:   'd3mnqv1r9etk7m',
+    ssl: {
+        rejectUnauthorized: false
+    }
 });
 
 client.connect();
@@ -22,7 +33,6 @@ client.query("select * from produse", function (err, rez) {
     // console.log(err);
     // console.log(rez);
 });
-
 
 
 app.set("view engine", "ejs");
