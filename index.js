@@ -8,6 +8,7 @@ const sass = require('sass')
 
 const date = new Date()
 let app = express()
+const port = process.env.PORT || 8080;
 
 // let client = new Client({
 //     user:       'victor',
@@ -122,4 +123,4 @@ app.get("/*", function (req, res) {
     )
 })
 
-app.listen(8080);
+app.listen(port);
