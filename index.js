@@ -77,29 +77,63 @@ app.get(["/", "/index", "/home"], function (req, res) {
     res.render("pagini/index", {ip: req.ip, imagini: ob_img.imagini, cale: ob_img.cale_galerie, data: date.getMonth()})
 })
 
-app.get("/produse", function(req, res){
-
-    console.log(req.query)
+app.get("/produse*", function(req, res){
 
     let conditie = ""
 
-    if(req.query.categorie)
-        conditie += ` AND categorie like '%${req.query.categorie}%'`
-        if(req.query.sub_categorie)
-            conditie += ` AND sub_categorie like '%${req.query.sub_categorie}%'`
+    console.log(req.query.categorie)
+    console.log(req.query.sub_categorie)
 
-    if(req.query.pret_min)
-        conditie += ` AND pret > ${req.query.pret_min}`
-    if(req.query.pret_max)
-        conditie += ` AND pret < ${req.query.pret_max}`
+    if (req.query.categorie instanceof Array) {
+        console.log('Array')
+        let pool = ""
 
-    console.log(conditie)
+        for (let i = 0; i < req.query.categorie.length - 1; ++i)
+            pool += '\'' + req.query.categorie[i] + '\','
+        pool += '\'' + req.query.categorie[req.query.categorie.length -1] + '\''
 
-    client.query(`SELECT * FROM produse WHERE 1=1 ${conditie};`, function(err, rez){
+
+        conditie += `categorie in (${pool})`;
+    }
+    else
+        if(req.query.categorie !== undefined)
+            conditie += `categorie like '%${req.query.categorie}%'`;
+
+    if (req.query.sub_categorie instanceof Array) {
+        if (conditie !== "")
+            conditie += ' and '
+        else
+            conditie = ""
+        let pool = ""
+
+        for (let i = 0; i < req.query.sub_categorie.length - 1; ++i)
+            pool += '\'' + req.query.sub_categorie[i] + '\','
+        pool += '\'' + req.query.sub_categorie[req.query.sub_categorie.length -1] + '\''
+
+
+        conditie += `sub_categorie in (${pool})`;
+    }
+    else
+        if(req.query.sub_categorie !== undefined) {
+            if (conditie !== "")
+                conditie += ' and '
+            else
+                conditie = ""
+            conditie += `sub_categorie like '%${req.query.sub_categorie}%'`;
+        }
+
+
+    if(req.query.categorie === undefined && req.query.sub_categorie === undefined)
+        conditie = "1 = 1"
+
+    console.log(`SELECT * FROM produse WHERE 1=1 AND ${conditie};`);
+
+    client.query(`SELECT * FROM produse WHERE 1=1 AND ${conditie};`, function(err, rez){
         if(!err) {
             res.render("pagini/produse", {produse: rez.rows, base: ""})
         } else {
-            console.log("Eroare la conectarea la db")
+
+            console.log("Eroare: ", err);
         }
     });
 })
