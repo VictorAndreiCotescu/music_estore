@@ -10,7 +10,6 @@ const ch_el = document.querySelector('input#ch_el');
 const ch_ea = document.querySelector('input#ch_elac');
 
 button.addEventListener('click', submit);
-
 console.log(window.location.href)
 console.log(window.location.origin + window.location.pathname)
 
