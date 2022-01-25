@@ -60,32 +60,31 @@ app.get(["/", "/index", "/home"], function (req, res) {
         let dim_mare = 500
 
         imag.mic = `${ob_img.cale_galerie}/mic/${nume_imag}.webp`
-        // imag.mediu = `${ob_img.cale_galerie}/mediu/${nume_imag}.webp`
-        // imag.mare = `${ob_img.cale_galerie}/mare/${nume_imag}.webp`
+        imag.mediu = `${ob_img.cale_galerie}/mediu/${nume_imag}.webp`
+        imag.mare = `${ob_img.cale_galerie}/mare/${nume_imag}.webp`
 
         imag.ini = `${ob_img.cale_galerie}/${imag.cale_fisier}`
 
-        // if (!fs.existsSync(imag.mic))
-        //     sharp(__dirname + "/" + imag.ini).resize(dim_mic).toFile(__dirname + "/" + imag.mic)
-        // if (!fs.existsSync(imag.mediu))
-        //     sharp(__dirname + "/" + imag.ini).resize(dim_mediu).toFile(__dirname + "/" + imag.mediu)
-        // if (!fs.existsSync(imag.mare))
-        //     sharp(__dirname + "/" + imag.ini).resize(dim_mare).toFile(__dirname + "/" + imag.mare)
+        if (!fs.existsSync(imag.mic))
+            sharp(__dirname + "/" + imag.ini).resize(dim_mic).toFile(__dirname + "/" + imag.mic)
+        if (!fs.existsSync(imag.mediu))
+            sharp(__dirname + "/" + imag.ini).resize(dim_mediu).toFile(__dirname + "/" + imag.mediu)
+        if (!fs.existsSync(imag.mare))
+            sharp(__dirname + "/" + imag.ini).resize(dim_mare).toFile(__dirname + "/" + imag.mare)
 
     }
-    console.log("intra");
+
     res.render("pagini/index", {ip: req.ip, imagini: ob_img.imagini, cale: ob_img.cale_galerie, data: date.getMonth()})
 })
 
 app.get("/produse*", function(req, res){
 
     let conditie = ""
-
-    console.log(req.query.categorie)
-    console.log(req.query.sub_categorie)
+    //console.log(req.query.categorie)
+    //console.log(req.query.sub_categorie)
 
     if (req.query.categorie instanceof Array) {
-        console.log('Array')
+        //console.log('Array')
         let pool = ""
 
         for (let i = 0; i < req.query.categorie.length - 1; ++i)
@@ -101,7 +100,7 @@ app.get("/produse*", function(req, res){
 
     if (req.query.sub_categorie instanceof Array) {
         if (conditie !== "")
-            conditie += ' and '
+            conditie += ' or '
         else
             conditie = ""
         let pool = ""
@@ -116,7 +115,7 @@ app.get("/produse*", function(req, res){
     else
         if(req.query.sub_categorie !== undefined) {
             if (conditie !== "")
-                conditie += ' and '
+                conditie += ' or '
             else
                 conditie = ""
             conditie += `sub_categorie like '%${req.query.sub_categorie}%'`;

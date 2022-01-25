@@ -11,12 +11,12 @@ const ch_ea = document.querySelector('input#ch_elac');
 
 button.addEventListener('click', submit);
 
+console.log(window.location.href)
+console.log(window.location.origin + window.location.pathname)
+
 function submit() {
-    let query = "";
-    if (window.location.href.includes('?'))
-        query = ""
-    else
-        query = "?"
+
+    let query = window.location.origin + window.location.pathname + "?"
 
     if(cb_ch.checked){
         query += "&categorie=chitara";
@@ -31,19 +31,22 @@ function submit() {
         query += "&categorie=acc";
     }
 
-    if(ch_ac.checked){
+
+    if ((ch_ac.checked || ch_el.checked || ch_ea.checked) && !cb_ch.checked){
+        query += "&categorie=chitara";
+    }
+    if (ch_ac.checked){
         query += "&sub_categorie=acustica";
     }
 
-    if(ch_el.checked){
+    if (ch_el.checked){
         query += "&sub_categorie=electrica";
     }
 
-    if(ch_ea.checked){
+    if (ch_ea.checked){
+
         query += "&sub_categorie=electro-acustica";
     }
 
-
-    console.log(query)
-    window.location.href += query
+    window.location.href = query
 }

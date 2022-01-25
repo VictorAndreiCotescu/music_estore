@@ -15,14 +15,33 @@
                                 "tbl1 tbl1 ev ev"
                                 "tbl1 tbl1 ev ev";
     }
+
+
+    ul#elm > * {
+        animation-name: insert;
+        animation-duration: 1s;
+    }
+
+    @keyframes insert {
+        from{
+            opacity: 10%;
+            max-width: 600px;
+            width: 200%;
+        } to {
+            opacity: 100%;
+            max-width: 300px;
+            width: 100%;
+        }
+    }
+
 </style>
 <div class="container" style="margin-top: 50px">
     <%-
     include("../fragmente/filter.ejs")
     %>
     <div id="ev">
-        <ul style="position: relative; z-index: 3">
-            <% for (let prod of locals.produse) { %>
+        <ul id = "elm" style="position: relative; z-index: 3">
+            <%function afisare(prod){ /*console.log(prod)*/ %>
 
                 <li class="card">
 
@@ -40,12 +59,18 @@
                         <i class="fas fa-star"></i>
                     </div>
 
-                    <p><button>Add to Cart</button></p>
+                    <p><button>Adauga in cos</button></p>
 
                 </li>
 
-            <% } %>
+            <%}
+            for (let prod of locals.produse) {
+                    afisare(prod)
+
+            }%>
+
         </ul>
+
     </div>
 </div>
 
